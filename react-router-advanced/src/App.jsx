@@ -5,6 +5,8 @@ import ProfileDetails from './components/ProfileDetails';
 import ProfileSettings from './components/ProfileSettings';
 import BlogPost from './components/BlogPost';
 import ProtectedRoute from './components/ProtectedRoute';
+import Profile from '/Profile';
+
 
 const App = () => {
   return (
