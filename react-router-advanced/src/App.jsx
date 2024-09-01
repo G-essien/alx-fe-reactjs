@@ -5,7 +5,7 @@ import ProfileDetails from './components/ProfileDetails';
 import ProfileSettings from './components/ProfileSettings';
 import BlogPost from './components/BlogPost';
 import ProtectedRoute from './components/ProtectedRoute';
-import Profile from '/Profile';
+import Profile from './components/Profile'
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="profile/*" element={<ProtectedRoute />}>
+        <Route path="/profile/*" element={<ProtectedRoute />}>
           <Route index element={<Profile />} />
           <Route path="details" element={<ProfileDetails />} />
           <Route path="settings" element={<ProfileSettings />} />
