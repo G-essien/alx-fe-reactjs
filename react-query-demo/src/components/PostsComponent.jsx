@@ -1,4 +1,3 @@
-import React from 'react';
 import { useQuery } from 'react-query';
 
 // Function to fetch posts from the API
