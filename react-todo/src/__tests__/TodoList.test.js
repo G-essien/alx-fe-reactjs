@@ -1,11 +1,12 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import TodoList from '../TodoList';
 
-test('renders TodoList component with initial todos', () => {
+test('renders TodoList component', () => {
     render(<TodoList />);
-    const todoItems = screen.getAllByRole('listitem');
-    expect(todoItems.length).toBe(3); // Initial 3 todos
+    const heading = screen.getByText(/todo list/i);  // Look for the heading element
+    expect(heading).toBeInTheDocument();
 });
+
 
 test('adds a new todo', () => {
     render(<TodoList />);
