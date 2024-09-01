@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-const FormikForm = () => (
+export const formikForm = () => (
   <Formik
     initialValues={{
       username: '',
@@ -43,4 +43,3 @@ const FormikForm = () => (
   </Formik>
 );
 
-export default FormikForm;
