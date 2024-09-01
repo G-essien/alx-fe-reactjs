@@ -1,11 +1,11 @@
 // src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Profile from './Profile';
-import ProfileDetails from './components/ProfileDetails';
-import ProfileSettings from './components/ProfileSettings';
-import BlogPost from './components/BlogPost';
-import ProtectedRoute from './components/ProtectedRoute';
+import Profile from './components/Profile';
+import ProfileDetails from './ProfileDetails';
+import ProfileSettings from './ProfileSettings';
+import BlogPost from './BlogPost';
+import ProtectedRoute from './ProtectedRoute';
 
 const App = () => {
   return (
