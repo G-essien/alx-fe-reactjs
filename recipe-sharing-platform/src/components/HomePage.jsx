@@ -162,7 +162,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'; 
-import data from '../data.json'; 
+import data from '../data.json';
+import AddRecipeForm from '../components/AddRecipeForm'; // Import the form component
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
@@ -186,6 +187,10 @@ const HomePage = () => {
     setCurrentIndex(prevIndex => (prevIndex + 1) % recipes.length);
   };
 
+  const handleAddRecipe = (newRecipe) => {
+    setRecipes((prevRecipes) => [...prevRecipes, newRecipe]);
+  };
+
   return (
     <div>
       {/* Navigation Bar */}
@@ -206,7 +211,7 @@ const HomePage = () => {
       <section className="bg-green-200 p-12 text-center">
         <h1 className="text-4xl font-bold text-gray-800">Hi, Good Morning!</h1>
         <p className="mt-4 text-gray-600">Explore our latest recipes, perfect for any time of day!</p>
-        
+
         {/* Carousel */}
         <div className="relative mt-8">
           <div className="flex overflow-hidden" ref={carouselRef}>
@@ -255,6 +260,24 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+
+      {/* Recipe Form Section */}
+      <section className="p-12 bg-white">
+        <h2 className="text-3xl font-bold text-center text-gray-800">Add a New Recipe</h2>
+        <AddRecipeForm onAddRecipe={handleAddRecipe} />
+      </section>
+      
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white p-8">
+         <div className="flex flex-col sm:flex-row justify-between">
+           <p>&copy; 2024 Recipe Sharing Platform</p>
+           <div className="flex space-x-4 mt-4 sm:mt-0">
+             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">X</a>
+             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+           </div>
+         </div>
+       </footer>
     </div>
   );
 }
