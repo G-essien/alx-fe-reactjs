@@ -1,17 +1,16 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
+import Search from './components/Search';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          {/* Add more routes as needed */}
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <header className="bg-green-500 text-white p-4 text-center">
+        <h1 className="text-3xl">GitHub User Search</h1>
+      </header>
+      <main className="p-6">
+        <Search />
+      </main>
+    </div>
   );
-};
+}
 
 export default App;
