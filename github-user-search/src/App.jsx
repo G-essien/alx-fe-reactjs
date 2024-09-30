@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Search from './components/Search';
+import Search from './services/Search';
 
 const App = () => {
   const [userData, setUserData] = useState(null);
