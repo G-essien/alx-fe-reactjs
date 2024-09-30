@@ -16,7 +16,7 @@ const Search = () => {
     try {
       const data = await fetchUserData(searchTerm);
       setUserData(data); // Set user data when API call is successful
-    } catch (err) {
+    } catch (error) {
       setError('Looks like we can\'t find the user');  // Handle error state
     } finally {
       setLoading(false);  // Stop loading after the API call
